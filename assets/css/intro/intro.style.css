@@ -1,0 +1,19 @@
+.cbp-af-header {
+  background-color: var(--intro-base-color-one-shade-darker);
+}
+
+.philly-title {
+  color: var(--font-color-white);
+}
+
+.cbp-af-header nav a {
+  color: var(--font-color-white);
+}
+
+.first-section-title {
+  color: var(--intro-base-color);
+}
+
+.main section:nth-child(even) {
+  background-color: var(--intro-base-color);
+}

@@ -1,0 +1,41 @@
+div.main section.section-whole-height.first div {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 30%;
+  right: 0%;
+  background-color: var(--font-color-white);
+  padding:
+}
+
+.first-section-video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 80vh;
+}
+
+.first-section-title {
+  position: absolute;
+  top: 1em;
+  left: -2.5em;
+  font-weight: bold;
+  color: var(--intro-base-color);
+  font-size: var(--font-size-section-title);
+  background-color: var(--font-color-white);
+  margin: 10px;
+  padding-left: 30px;
+}
+
+.first-section-title span{
+  font-size: 2em;
+}
+
+.first-section-text {
+  position: absolute;
+  top: 25em;
+  width: 80%;
+  text-align: justify;
+  color: var(--font-color-black);
+  font-size: var(--font-size-section-content);
+}

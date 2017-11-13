@@ -1,0 +1,31 @@
+:root {
+  /* page specific colors*/
+
+  /*light blue*/
+  --intro-base-color: #97B4C5;
+  --intro-base-color-one-shade-darker: #7199b0;
+  --intro-base-color-two-shades-darker: #527c94;
+
+  /*green*/
+  --climate-base-color: #8EB67C;
+  --climate-base-color-one-shade-darker: #6e9f58;
+  --climate-base-color-two-shades-darker: #547943;
+
+  /*dark blue*/
+  --mobility-base-color: #294489;
+
+  /*purple*/
+  --street-base-color: #B570A7;
+
+  /*orange*/
+  --public-space-base-color: #ED793C;
+
+  /*gray*/
+  --other-base-color: #aaa;
+
+
+  /* font colors*/
+  --font-color-white: #fff;
+  --font-color-black: #000;
+
+}
