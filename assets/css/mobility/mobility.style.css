@@ -1,0 +1,11 @@
+.fixed-header {
+  background-color: var(--mobility-base-color-one-shade-darker);
+}
+
+.first-section-title{
+  color: var(--mobility-base-color);
+}
+
+.main section:nth-child(even) {
+  background-color: var(--mobility-base-color);
+}

@@ -1,3 +1,159 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: var(--font-color-black);
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/*----------------------
+
+          HEADER
+
+----------------------*/
+.container-fix{
+  position: relative;
+  margin-top: 8vh;
+}
+
+.fixed-header {
+  height: 8vh;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fixed-header-inner {
+  width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.fixed-header h1 {
+	display: inline-block;
+	position: relative;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+	font-size: 2em;
+	margin: 0;
+	float: left;
+  line-height: 90px;
+}
+
+.philly-title {
+	color: var(--font-color-white);
+}
+
+.philly-title:hover {
+  color: var(--font-color-black);
+}
+
+.fixed-header nav {
+	display: inline-block;
+	position: relative;
+  float: right;
+  color: var(--font-color-white);
+}
+
+.fixed-header nav a {
+  color: #f0f0f0;
+	font-weight: 700;
+	margin: 0 0 0 20px;
+	font-size: 1.4em;
+  line-height: 90px;
+}
+
+.fixed-header nav a:hover {
+  color: #000;
+}
+
+/* Effect Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/*----------------------
+
+        SECTIONS
+
+----------------------*/
+
+.main section > div {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 2.875em 1.875em 1.875em;
+}
+
+.section-whole-height {
+	font-size: 2em;
+	position: relative;
+	min-height: 92vh;
+	text-align: center;
+}
+
+.section-whole-height.first {
+	min-height: 92vh;
+}
+
+.section-whole-height.first.intro {
+	min-height: 77vh;
+}
+
+.main > section:nth-child(even) {
+	background: #87cef8;
+	color: #fff;
+}
+
+.main section:first-child > div {
+	padding-top: 0em;
+	align-items: center;
+}
+
 div.main section.section-whole-height.first div {
   position: absolute;
   top: 0px;
@@ -12,7 +168,11 @@ div.main section.section-whole-height.first div {
   position: absolute;
   left: 0px;
   top: 0px;
-  height: 80vh;
+  height: 92vh;
+}
+
+.first-section-video.intro{
+  height: 77vh;
 }
 
 .first-section-title {
@@ -20,11 +180,13 @@ div.main section.section-whole-height.first div {
   top: 1em;
   left: -2.5em;
   font-weight: bold;
+  letter-spacing: 5px;
+  margin: 10px;
+  padding-left: 30px;
+  text-transform: uppercase;
   color: var(--intro-base-color);
   font-size: var(--font-size-section-title);
   background-color: var(--font-color-white);
-  margin: 10px;
-  padding-left: 30px;
 }
 
 .first-section-title span{
@@ -38,4 +200,31 @@ div.main section.section-whole-height.first div {
   text-align: justify;
   color: var(--font-color-black);
   font-size: var(--font-size-section-content);
+}
+
+
+@media screen and (max-width: 55em) {
+
+	.container > header h1,
+	.container > header nav {
+		float: none;
+	}
+
+	.container > header > span,
+	.container > header h1 {
+		text-align: center;
+	}
+
+	.container > header nav {
+		margin: 0 auto;
+	}
+
+	.container > header > span {
+		text-indent: 30px;
+	}
+
+	.main section p {
+		padding: 2em 5%;
+		font-size: 1.4em;
+	}
 }

@@ -13,15 +13,23 @@
 
   /*dark blue*/
   --mobility-base-color: #294489;
+  --mobility-base-color-one-shade-darker: #20356b;
+  --mobility-base-color-two-shades-darker: #17264d;
 
   /*purple*/
   --street-base-color: #B570A7;
+  --street-base-color-one-shade-darker: #a75797;
+  --street-base-color-two-shades-darker: #8d4980;
 
   /*orange*/
   --public-space-base-color: #ED793C;
+  --public-space-base-color-one-shade-darker: #ea6018;
+  --public-space-base-color-two-shades-darker: #c85112;
 
   /*gray*/
   --other-base-color: #aaa;
+  --other-base-color-one-shade-darker: #969696;
+  --other-base-color-two-shades-darker: #838383;
 
 
   /* font colors*/

@@ -1,0 +1,11 @@
+.fixed-header {
+  background-color: var(--public-space-base-color-one-shade-darker);
+}
+
+.first-section-title{
+  color: var(--public-space-base-color);
+}
+
+.main section:nth-child(even) {
+  background-color: var(--public-space-base-color);
+}

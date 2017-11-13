@@ -1,0 +1,11 @@
+.fixed-header {
+  background-color: var(--street-base-color-one-shade-darker);
+}
+
+.first-section-title{
+  color: var(--street-base-color);
+}
+
+.main section:nth-child(even) {
+  background-color: var(--street-base-color);
+}
