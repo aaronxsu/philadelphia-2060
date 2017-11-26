@@ -1,0 +1,45 @@
+:root {
+  /* page specific colors*/
+
+  /*light blue*/
+  --intro-base-color: #97B4C5;
+  --intro-base-color-one-shade-darker: #7199b0;
+  --intro-base-color-two-shades-darker: #527c94;
+
+  /*green*/
+  --climate-base-color: #8EB67C;
+  --climate-base-color-one-shade-darker: #6e9f58;
+  --climate-base-color-two-shades-darker: #547943;
+
+  /*dark blue*/
+  --mobility-base-color: #294489;
+  --mobility-base-color-one-shade-darker: #20356b;
+  --mobility-base-color-two-shades-darker: #17264d;
+
+  /*purple*/
+  --street-base-color: #B570A7;
+  --street-base-color-one-shade-darker: #a75797;
+  --street-base-color-two-shades-darker: #8d4980;
+
+  /*orange*/
+  --public-space-base-color: #ED793C;
+  --public-space-base-color-one-shade-darker: #ea6018;
+  --public-space-base-color-two-shades-darker: #c85112;
+
+  /*gray*/
+  --other-base-color: #aaa;
+  --other-base-color-one-shade-darker: #969696;
+  --other-base-color-two-shades-darker: #838383;
+
+
+  /* font colors*/
+  --font-color-white: #fff;
+  --font-color-black: #000;
+
+
+  /*section spacing*/
+  --section-header-left: 2vw;
+  --section-header-top: 2vh;
+  --section-content-left: 2vw;
+
+}

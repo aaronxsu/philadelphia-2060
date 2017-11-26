@@ -2,10 +2,85 @@
   background-color: var(--climate-base-color-one-shade-darker);
 }
 
+nav#menu::before {
+  background-color: var(--climate-base-color);
+}
+
 .first-section-title{
   color: var(--climate-base-color);
 }
 
-.main section:nth-child(even) {
+.section.colored-bkgd {
   background-color: var(--climate-base-color);
+}
+
+.section-header-title.colored-title {
+  color: var(--climate-base-color);
+}
+
+#threats-line-chart img{
+  width: inherit;
+}
+
+#threats-photo img {
+  height: inherit;
+}
+
+.vision-text {
+  color: var(--font-color-white);
+  font-weight: bold;
+}
+
+.card-header.threats a {
+  color: var(--climate-base-color);
+}
+
+#threats-line-chart,
+#threats-photo{
+  display: none;
+  z-index: 2000;
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: var(--climate-base-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--climate-base-color);
+}
+
+.card-header.strategy {
+  color: var(--climate-base-color);
+}
+
+.card-body.strategy {
+  background-color: var(--other-base-color);
+}
+
+.modal-header.strategy h2 {
+  color: var(--climate-base-color);
+}
+
+.strategy-modal-close {
+  color: var(--climate-base-color);
+}
+
+.section-slide-header-colored-bkgd {
+  color: var(--font-color-white);
+}
+
+.vulnerability-content-left{
+  top: 28vh;
+  height: 60vh;
+  font-size: 1.3em;
+}
+
+.vulnerability-content-left p:first-child{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#vulnerability-composite-map img {
+  width: inherit;
 }
