@@ -2,10 +2,50 @@
   background-color: var(--mobility-base-color-one-shade-darker);
 }
 
+nav#menu::before {
+  background-color: var(--mobility-base-color);
+}
+
 .first-section-title{
   color: var(--mobility-base-color);
 }
 
-.main section:nth-child(even) {
+.section.colored-bkgd {
   background-color: var(--mobility-base-color);
+}
+
+.section-header-title.colored-title {
+  color: var(--mobility-base-color);
+}
+
+.vision-text {
+  margin-top: -20vh;
+  color: var(--font-color-white);
+  font-weight: bold;
+}
+
+.card-header.strategy {
+  color: var(--mobility-base-color);
+}
+
+.card-header.threats a {
+  color: var(--mobility-base-color);
+}
+
+#condition-transit,
+#condition-funding,
+#trend-avs {
+  display: none;
+  z-index: 2000;
+}
+
+#trend-avs img {
+  height: inherit;
+  position: absolute;
+  left: 25%;
+}
+
+.strategy-modal-left.mobility-5 img {
+  width: 100%;
+  height: inherit;
 }

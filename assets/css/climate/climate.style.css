@@ -39,7 +39,6 @@ nav#menu::before {
 #threats-photo{
   display: none;
   z-index: 2000;
-  background-color: white;
 }
 
 input:checked + .slider {
@@ -82,5 +81,6 @@ input:focus + .slider {
 }
 
 #vulnerability-composite-map img {
+  margin-top: 4vh;
   width: inherit;
 }

@@ -200,7 +200,6 @@ $(document).ready(function() {
     var init = onInit();
 
     bindThreatsEvents(init);
-    $('#myModal').modal({show: true});
     bindStrategyEvents();
     addLocators(init);
 });
