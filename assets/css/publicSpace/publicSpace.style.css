@@ -2,10 +2,34 @@
   background-color: var(--public-space-base-color-one-shade-darker);
 }
 
+nav#menu::before {
+  background-color: var(--public-space-base-color);
+}
+
 .first-section-title{
+  color: var(--public-space-base-color);
+  letter-spacing: 0px;
+  right: 20vw;
+}
+
+.section.colored-bkgd {
+  background-color: var(--public-space-base-color);
+}
+
+.section-header-title.colored-title {
   color: var(--public-space-base-color);
 }
 
-.main section:nth-child(even) {
-  background-color: var(--public-space-base-color);
+.vision-text {
+  margin-top: -20vh;
+  color: var(--font-color-white);
+  font-weight: bold;
+}
+
+.card-header.strategy {
+  color: var(--public-space-base-color);
+}
+
+.card-header.threats a {
+  color: var(--public-space-base-color);
 }

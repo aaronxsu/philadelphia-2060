@@ -5,12 +5,43 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Philadelphia 2060 - Public Space</title>
-		<link rel="stylesheet" type="text/css" href="assets/color/color.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/defaultStyles/defaultStyles.css" />
 		<link rel="stylesheet" type="text/css" href="assets/font/font.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/jquery.fullpage.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/sectionNav.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/shared/shared.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/leaflet.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/publicSpace/publicSpace.style.css" />
+		<script type="text/javascript" src="assets/js/shared/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/shared/jquery.fullpage.min.js"></script>
+		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/shared/leaflet.js"></script>
+		<script type="text/javascript" src="assets/js/shared/underscore.min.js"></script>
+		<script type="text/javascript" src="assets/js/publicSpace/publicSpace.main.js"></script>
 	</head>
 	<body>
+		<div id="section-nav">
+			<input type="checkbox" id="navcheck" role="button" title="menu" class="section-nav-input">
+			<label for="navcheck" aria-hidden="true" title="menu" id="section-nav-label">
+				<span class="burger">
+					<span class="bar">
+						<span class="visuallyhidden">Menu</span>
+					</span>
+				</span>
+			</label>
+			<nav id="menu">
+				<a href="#" class="scroll-menu">CONDITIONS</a>
+				<a href="#" class="scroll-menu">TRENDS</a>
+				<a href="#" class="scroll-menu">VISION</a>
+				<a href="#" class="scroll-menu">TYPOLOGIES</a>
+				<a href="#" class="scroll-menu">STRATEGIES</a>
+				<a href="#" class="scroll-menu">FOCUS AREAS</a>
+				<a href="#" class="scroll-menu">GETTING STARTED</a>
+			</nav>
+		</div>
 		<div class="container-fix">
 			<div class="fixed-header">
 				<div class="fixed-header-inner">
@@ -23,34 +54,206 @@
 					</nav>
 				</div>
 			</div>
-			<div class="main">
-				<section class="section-whole-height first">
-					<video loop autoplay class="first-section-video">
-						<source src="assets/video/public-space/public-space-vid.mp4" type="video/mp4">
+		</div>
+		<div class="main" id="climate-fullpage">
+			<div class="section fp-auto-height">
+				<div class="section-custom-height">
+					<video loop data-autoplay>
+						<source data-src="assets/video/public-space/public-space-vid.mp4" type="video/mp4">
 					</video>
-					<div class="first-section-content">
+					<div class="first-section-rightside">
 						<p class="first-section-title"><span><u>P</u></span>ublic Space</p>
-						<p class="first-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Climate 2</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Climate 3</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Climate 4</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Climate 5</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Climate 6</p></div>
-				</section>
-				<section class="section-whole-height last">
-					<div><p>Climate 7</p></div>
-				</section>
+				</div>
+			</div>
+			<div class="section" id="section-conditions">
+				<div class="section-header">
+					<p class="section-header-title colored-title">Conditions</p>
+				</div>
+				<div class="left-content-under-title threats-content-left">
+					Today, Philadelphia has over 10,000 acres of parks, 2,535 miles of streets, X libraries, Y public schools, and Z community centers.
+				</div>
+				<div class="right-content-whole-height">
+					<div id="condition-public-space" class="right-content-whole-height-holder"><h3>(Placeholder)Static map of parks, libraries, community centers, public schools, and other things that fit in typologies</h3></div>
+				</div>
+			</div>
+			<div class="section" id="section-conditions">
+				<div class="section-custom-height">
+					<div class="section-header">
+						<p class="section-header-title colored-title">Trends</p>
+					</div>
+					<div class="left-content-under-title threats-content-left">
+						<div id="trend-accordion" role="tablist">
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="trend-heading-1">
+						      <h4 class="mb-0">
+						        <a data-toggle="collapse" href="#collapseOne-trend" aria-expanded="true" aria-controls="collapseOne-trend">
+											Equity and Access
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne-trend" class="collapse show" role="tabpanel" aria-labelledby="threats-heading-1" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="trend-heading-2">
+						      <h4 class="mb-0">
+						        <a class="collapsed" data-toggle="collapse" href="#collapseTwo-trend" aria-expanded="false" aria-controls="collapseTwo-trend">
+											Multi-Use
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo-trend" class="collapse" role="tabpanel" aria-labelledby="threats-heading-2" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+							<div class="card">
+						    <div class="card-header threats trend" role="tab" id="trend-heading-3">
+						      <h4 class="mb-0">
+						        <a data-toggle="collapse" href="#collapseThree-trend" aria-expanded="true" aria-controls="collapseThree-trend">
+											Limited Civic Engagement
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree-trend" class="collapse show" role="tabpanel" aria-labelledby="threats-heading-1" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="trend-heading-4">
+						      <h4 class="mb-0">
+						        <a class="collapsed" data-toggle="collapse" href="#collapseFour-trend" aria-expanded="false" aria-controls="collapseFour-trend">
+											Reclaiming Streets for Public Space
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFour-trend" class="collapse" role="tabpanel" aria-labelledby="threats-heading-2" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="right-content-whole-height">
+						<div id="trend-equity" class="right-content-whole-height-holder"><h1>(Placeholder)Picture: Image of Kids Playing (in book)</h1></div>
+						<div id="trend-mutliuse" class="right-content-whole-height-holder"><h1>(Placeholder)Picture: pic of multiple things happening in one place with different groups of people</h1></div>
+						<div id="trend-engagement" class="right-content-whole-height-holder"><h1>(Placeholder)Picture: Community meeting</h1></div>
+						<div id="trend-reclaim" class="right-content-whole-height-holder"><h1>(Placeholder)Picture: Reclaiming streets pic (from Trends presentation)</h1></div>
+					</div>
+				</div>
+			</div>
+			<div class="section colored-bkgd" id="section-vision">
+				<p class="vision-text">In 2060, Philadelphia's network of public spaces fosters civic engagement and connection, creates flexible and multi-use urban areas, reclaims street space for public use, and allows our local ecosystems to thrive.</p>
+			</div>
+			<div class="section" id="section-typologies">
+				<div class="section-header">
+					<p class="section-header-title colored-title">Typologies</p>
+				</div>
+				<div class="typology-content first-line">
+					<div class="card typology five-ele first-line-first">
+					  <img class="card-img-top" src="assets/image/climate/Typology_WaterFront.png" alt="Mini">
+					  <div class="card-body typology">
+					    <h4 class="card-title">Mini</h4>
+					  </div>
+					</div>
+					<div class="card typology five-ele first-line-middle">
+					  <img class="card-img-top" src="assets/image/climate/Typology_Vacant.png" alt="Neighborhood">
+					  <div class="card-body typology">
+					    <h4 class="card-title">Neighborhood</h4>
+					  </div>
+					</div>
+					<div class="card typology five-ele">
+					  <img class="card-img-top" src="assets/image/climate/Typology_WaterFront.png" alt="Neighborhood">
+					  <div class="card-body typology">
+					    <h4 class="card-title">Neighborhood</h4>
+					  </div>
+					</div>
+				</div>
+				<div class="typology-content second-line">
+					<div class="card typology five-ele second-line-first">
+					  <img class="card-img-top" src="assets/image/climate/Typology_Buildings.png" alt="Linear">
+					  <div class="card-body typology">
+					    <h4 class="card-title">Linear</h4>
+					  </div>
+					</div>
+					<div class="card typology five-ele">
+					  <img class="card-img-top" src="assets/image/climate/Typology_Park.png" alt="Natural">
+					  <div class="card-body typology">
+					    <h4 class="card-title">Natural</h4>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="section colored-bkgd" id="section-strategies">
+				<div class="section-header">
+					<p class="section-header-title">Strategies</p>
+				</div>
+				<div class="strategy-content first-line">
+					<div class="card text-white strategy" id="strategy-1">
+					  <div class="card-header strategy">P1.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Activate Small Spaces<span class="card-title-hidden-holder">Stations</span></h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-2">
+					  <div class="card-header strategy">P2.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Reclaim Streets<span class="card-title-hidden-holder">Stations Station</span></h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-3">
+					  <div class="card-header strategy">P3.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Create Civic Engagement Stations</h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-4">
+					  <div class="card-header strategy">P4.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Develop Dynamic Spaces</h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-5">
+					  <div class="card-header strategy">P5.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Train Public Stewards<span class="card-title-hidden-holder">Stations</span></h4>
+					  </div>
+					</div>
+				</div>
+				<div class="strategy-content second-line">
+					<div class="card text-white strategy" id="strategy-6">
+					  <div class="card-header strategy">P6.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Build Co-Working & Maker Spaces</h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-7">
+					  <div class="card-header strategy">P7.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Preserve Wildlife Areas<span class="card-title-hidden-holder">Stations</span></h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-8">
+					  <div class="card-header strategy">P8.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Support Ecosystem Services</h4>
+					  </div>
+					</div>
+					<div class="card strategy text-white" id="strategy-9">
+					  <div class="card-header strategy">P9.</div>
+					  <div class="card-body strategy">
+					    <h4 class="card-title strategy">Create a Digital Public Space</h4>
+					  </div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
