@@ -2,10 +2,58 @@
   background-color: var(--street-base-color-one-shade-darker);
 }
 
+nav#menu::before {
+  background-color: var(--street-base-color);
+}
+
 .first-section-title{
   color: var(--street-base-color);
 }
 
-.main section:nth-child(even) {
+.section.colored-bkgd {
   background-color: var(--street-base-color);
+}
+
+.section-header-title.colored-title {
+  color: var(--street-base-color);
+}
+
+.vision-text {
+  margin-top: -20vh;
+  color: var(--font-color-white);
+  font-weight: bold;
+}
+
+.card-header.strategy {
+  color: var(--street-base-color);
+}
+
+.card-header.threats a {
+  color: var(--street-base-color);
+}
+
+#condition-grid img {
+  position: absolute;
+  top: 25vh;
+  left: 20vw;
+}
+
+#condition-coverage img {
+  height: inherit;
+}
+
+#condition-coverage {
+  display: none;
+}
+
+.stree-slider {
+  position: absolute;
+  top: 15vh;
+  left: 2vw;
+  height: 73%;
+  width: 96vw;
+}
+
+.modal-header.strategy h1{
+  color: var(--street-base-color);
 }

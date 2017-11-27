@@ -57,7 +57,7 @@ input:focus + .slider {
   background-color: var(--other-base-color);
 }
 
-.modal-header.strategy h2 {
+.modal-header.strategy h1 {
   color: var(--climate-base-color);
 }
 

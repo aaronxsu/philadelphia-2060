@@ -367,7 +367,7 @@ h4.card-title.strategy {
   font-weight: bold;
 }
 
-.modal-header.strategy h2 {
+.modal-header.strategy h1 {
   font-weight: bold;
 }
 
@@ -386,7 +386,7 @@ h4.card-title.strategy {
   padding-left: 20px;
   display: inline-block;
   position: absolute;
-  width: 35%;
+  width: 30%;
   height: 95%;
   right: 2%;
   background-color: var(--font-color-white);
@@ -432,4 +432,8 @@ h4.card-title.strategy {
 
 .fp-controlArrow.fp-prev {
   border-right-color: var(--other-base-color-two-shades-darker);
+}
+
+.placeholder-box {
+  border: 1px solid black;
 }

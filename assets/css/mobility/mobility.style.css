@@ -36,7 +36,6 @@ nav#menu::before {
 #condition-funding,
 #trend-avs {
   display: none;
-  z-index: 2000;
 }
 
 #trend-avs img {
@@ -48,4 +47,8 @@ nav#menu::before {
 .strategy-modal-left.mobility-5 img {
   width: 100%;
   height: inherit;
+}
+
+.modal-header.strategy {
+  color: var(--mobility-base-color);
 }

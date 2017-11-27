@@ -14,6 +14,13 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/shared/shared.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/shared/leaflet.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/mobility/mobility.style.css" />
+		<script type="text/javascript" src="assets/js/shared/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/shared/jquery.fullpage.min.js"></script>
+		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/shared/leaflet.js"></script>
+		<script type="text/javascript" src="assets/js/shared/underscore.min.js"></script>
+		<script type="text/javascript" src="assets/js/mobility/mobility.main.js"></script>
 	</head>
 	<body>
 		<div id="section-nav">
@@ -290,10 +297,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-1-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M1: Automate Transit</h2>
+						<h1>M1: Automate Transit</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
+						<div class="strategy-modal-left placeholder-box">
 							<div>Transit automation timeline</div>
 						</div>
 						<div class="strategy-modal-right">
@@ -308,10 +315,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-2-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M2: Improve Neighborhood Surface Transit</h2>
+						<h1>M2: Improve Neighborhood Surface Transit</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
+						<div class="strategy-modal-left placeholder-box">
 							<div>Interactive surface transit map</div>
 						</div>
 						<div class="strategy-modal-right">
@@ -329,10 +336,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-3-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M3: Transform Regional Rail</h2>
+						<h1>M3: Transform Regional Rail</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
+						<div class="strategy-modal-left placeholder-box">
 							<div>Interactive Urban Rail Map</div>
 						</div>
 						<div class="strategy-modal-right">
@@ -350,10 +357,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-4-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M4: Optimize Goods Distribution</h2>
+						<h1>M4: Optimize Goods Distribution</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
+						<div class="strategy-modal-left placeholder-box">
 							<div>Composite/interactive Map of Goods Center Scores</div>
 						</div>
 						<div class="strategy-modal-right">
@@ -370,7 +377,7 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-5-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M5: Regulate Private Parking</h2>
+						<h1>M5: Regulate Private Parking</h1>
 					</div>
 					<div class="modal-body">
 						<div class="strategy-modal-left">
@@ -390,7 +397,7 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-6-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M6: Price Vehicle Usage</h2>
+						<h1>M6: Price Vehicle Usage</h1>
 					</div>
 					<div class="modal-body">
 						<div class="strategy-modal-left">
@@ -411,10 +418,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-7-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M7: Expand Rapid Transit</h2>
+						<h1>M7: Expand Rapid Transit</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
+						<div class="strategy-modal-left placeholder-box">
 							<div>Static/Interactive Aerial-Imagery based map for Locust Street Tunnel and 25th Street Corridor with major location callouts</div>
 						</div>
 						<div class="strategy-modal-right">
@@ -432,7 +439,7 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-8-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M8: Enhance Mobility in Central Philadelphia</h2>
+						<h1>M8: Enhance Mobility in Central Philadelphia</h1>
 					</div>
 					<div class="modal-body">
 						<div class="strategy-modal-left">
@@ -453,20 +460,13 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-9-close">X</div>
 					<div class="modal-header strategy">
-						<h2>M9: Rethink Urban Highways</h2>
+						<h1>M9: Rethink Urban Highways</h1>
 					</div>
 					<div class="modal-body">
-						<h2>This modal should be customized since it is not the same as any other modal layout in the wireframe.</h2>
+						<h3>This modal should be customized since it is not the same as any other modal layout in the wireframe.</h3>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="assets/js/shared/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="assets/js/shared/jquery.fullpage.min.js"></script>
-		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="assets/js/shared/leaflet.js"></script>
-		<script type="text/javascript" src="assets/js/shared/underscore.min.js"></script>
-		<script type="text/javascript" src="assets/js/mobility/mobility.main.js"></script>
 	</body>
 </html>
