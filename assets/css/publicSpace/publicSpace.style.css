@@ -33,3 +33,20 @@ nav#menu::before {
 .card-header.threats a {
   color: var(--public-space-base-color);
 }
+
+.modal-header.strategy h1 {
+  color: var(--public-space-base-color);
+}
+
+#trend-mutliuse,
+#trend-engagement,
+#trend-reclaim {
+  display: none;
+}
+
+#trend-equity img,
+#trend-mutliuse img,
+#trend-engagement img,
+#trend-reclaim img{
+  height: inherit;
+}
