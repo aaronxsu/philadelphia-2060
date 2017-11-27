@@ -5,15 +5,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Philadelphia 2060 - Intro</title>
-		<link rel="stylesheet" type="text/css" href="assets/color/color.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/defaultStyles/defaultStyles.css" />
 		<link rel="stylesheet" type="text/css" href="assets/font/font.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/shared/shared.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/shared/jquery.fullpage.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/sectionNav.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/shared.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/shared/leaflet.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/intro/intro.style.css" />
+		<script type="text/javascript" src="assets/js/shared/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/shared/jquery.fullpage.min.js"></script>
+		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/shared/leaflet.js"></script>
+		<script type="text/javascript" src="assets/data/climate/climateData.js"></script>
+		<script type="text/javascript" src="assets/js/shared/underscore.min.js"></script>
+		<script type="text/javascript" src="assets/js/intro/intro.main.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div class="intro-fixed-header">
+		<div class="container-fix">
+			<div class="fixed-header">
 				<div class="fixed-header-inner">
 					<h1><a href="intro.html" class="philly-title">Philadelphia 2060</a></h1>
 					<nav class="cl-effect-1">
@@ -24,39 +36,151 @@
 					</nav>
 				</div>
 			</div>
-			<div class="main">
-				<section class="section-whole-height first intro">
-					<video loop autoplay class="first-section-video intro">
-						<source src="assets/video/intro/intro-vid.mp4" type="video/mp4">
+		</div>
+		<div class="main" id="climate-fullpage">
+			<div class="section fp-auto-height">
+				<div class="section-custom-height">
+					<video loop data-autoplay>
+						<source data-src="assets/video/intro/intro-vid.mp4" type="video/mp4">
 					</video>
-					<div class="first-section-content">
+					<div class="first-section-rightside">
 						<p class="first-section-title"><span><u>I</u></span>ntroduction</p>
-						<p class="first-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Intro 2</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Intro 3</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Intro 4</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Intro 5</p></div>
-				</section>
-				<section class="section-whole-height">
-					<div><p>Intro 6</p></div>
-				</section>
-				<section class="section-whole-height last">
-					<div><p>Intro 7</p></div>
-				</section>
+				</div>
+			</div>
+			<div class="section colored-bkgd">
+				<div class="section-header">
+					<p class="section-header-title">Why 2060</p>
+				</div>
+				<div style="position:absolute; top: 20vh; left: 2vw; font-size: 3em; color:white; padding-right: 2vw;">
+					<p>A lot can change in 43 years. Looking beyond a typical planning cycle gives Philadelphia the opportunity to be visionary, to imagine how long-term trends will play out, and to plan independent of short-term constraints. Philly 2060 is a transportation and public realm plan focusing on four key factors  shaping  Philadelphia  in  2060:  Climate  Change,  Mobility,  Streets,  and  Public  Space.</p>
+				</div>
+			</div>
+			<div class="section" id="section-conditions">
+				<div class="section-custom-height">
+					<div class="section-header">
+						<p class="section-header-title colored-title">Challenges</p>
+					</div>
+					<div class="left-content-under-title threats-content-left">
+						<div id="trend-accordion" role="tablist">
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="threat-heading-1">
+						      <h4 class="mb-0">
+						        <a data-toggle="collapse" href="#collapseOne-trend" aria-expanded="true" aria-controls="collapseOne-trend">
+											Persisting Racial Segregation
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne-trend" class="collapse show" role="tabpanel" aria-labelledby="threats-heading-1" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="threat-heading-2">
+						      <h4 class="mb-0">
+						        <a class="collapsed" data-toggle="collapse" href="#collapseTwo-trend" aria-expanded="false" aria-controls="collapseTwo-trend">
+											High Rates of Poverty
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo-trend" class="collapse" role="tabpanel" aria-labelledby="threats-heading-2" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+							<div class="card">
+						    <div class="card-header threats trend" role="tab" id="threat-heading-3">
+						      <h4 class="mb-0">
+						        <a data-toggle="collapse" href="#collapseThree-trend" aria-expanded="true" aria-controls="collapseThree-trend">
+											Aging Infrastructure
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree-trend" class="collapse show" role="tabpanel" aria-labelledby="threats-heading-1" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header threats trend" role="tab" id="threat-heading-4">
+						      <h4 class="mb-0">
+						        <a class="collapsed" data-toggle="collapse" href="#collapseFour-trend" aria-expanded="false" aria-controls="collapseFour-trend">
+											High Vacancy
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFour-trend" class="collapse" role="tabpanel" aria-labelledby="threats-heading-2" data-parent="#trend-accordion">
+						      <div class="card-body">
+										We may put some talking points here?
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="right-content-whole-height">
+						<div id="trend-race" class="right-content-whole-height-holder">
+							<img src="assets/image/intro/Trends_Demographics_RaceDotMap.png"></img>
+						</div>
+						<div id="trend-poverty" class="right-content-whole-height-holder">
+							<img src="assets/image/intro/Poverty_DC_NY_Comparison_BarChart.png"></img>
+						</div>
+						<div id="trend-infras" class="right-content-whole-height-holder">
+							<img src="assets/image/intro/OldPipes.png"></img>
+						</div>
+						<div id="trend-vacancy" class="right-content-whole-height-holder">
+							<img src="assets/image/intro/Vacancy_Chart.png"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section colored-bkgd">
+				<div class="section-header">
+					<p class="section-header-title">Philadelphia Today</p>
+				</div>
+				<div class="intro-content-left-big" id="philly-today">
+					<img src="assets/image/intro/Trends_map_population_change-01.jpg"></img>
+				</div>
+				<div class="intro-content-right-small">
+					<p>Opportunities: new investment, an influx of residents, and a growing civic activism have begun impacting Philadelphia, albeit unequally</p>
+				</div>
+			</div>
+			<div class="section" id="section-strategies">
+				<div class="section-header">
+					<p class="section-header-title colored-title">Projected Growth</p>
+				</div>
+				<div class="intro-content-left-big" id="philly-growth">
+					<img src="assets/image/intro/Population_Projection.png"></img>
+				</div>
+				<div class="intro-content-right-small colored">
+					<p>Projecting Populations: why this plan has no population projection</p>
+				</div>
+			</div>
+			<div class="section colored-bkgd">
+				<div class="section-header">
+					<p class="section-header-title">Assumptions</p>
+				</div>
+				<div class="intro-content-left-big placeholder-box">
+					<h2>A list of assumptions</h2>
+				</div>
+				<div class="intro-content-right-small">
+					<p>A lot can change in 40 years. In order to plan for 2060, we needed to create a set of assumptions for what the future will look like….</p>
+				</div>
+			</div>
+			<div class="section" id="section-strategies">
+				<div class="section-header">
+					<p class="section-header-title colored-title">Philadelphia 2060</p>
+				</div>
+				<div class="intro-content-left-big" id="philly-2060">
+					<img src="assets/image/intro/HappyCrowd_PhillyMag.jpg"></img>
+				</div>
+				<div class="intro-content-right-small colored">
+					<p>Promoting growth and mitigating forces of decline</p>
+				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="assets/js/shared/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="assets/js/shared/jquery.fullpage.min.js"></script>
-		<script type="text/javascript" src="assets/js/shared/classie.js"></script>
-		<script type="text/javascript" src="assets/js/shared/animatedHeader.min.js"></script>
 	</body>
 </html>

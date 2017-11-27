@@ -40,20 +40,20 @@ var bingTrendEvents = function() {
                 $('#trend-engagement').hide();
                 $('#trend-reclaim').hide();
             } else if(trendSelectedHeading === 'trend-heading-2'){
-              $('#trend-equity').hide();
-              $('#trend-mutliuse').show();
-              $('#trend-engagement').hide();
-              $('#trend-reclaim').hide();
+                $('#trend-equity').hide();
+                $('#trend-mutliuse').show();
+                $('#trend-engagement').hide();
+                $('#trend-reclaim').hide();
             } else if(trendSelectedHeading === 'trend-heading-3'){
-              $('#trend-equity').hide();
-              $('#trend-mutliuse').hide();
-              $('#trend-engagement').show();
-              $('#trend-reclaim').hide();
+                $('#trend-equity').hide();
+                $('#trend-mutliuse').hide();
+                $('#trend-engagement').show();
+                $('#trend-reclaim').hide();
             } else{
-              $('#trend-equity').hide();
-              $('#trend-mutliuse').hide();
-              $('#trend-engagement').hide();
-              $('#trend-reclaim').show();
+                $('#trend-equity').hide();
+                $('#trend-mutliuse').hide();
+                $('#trend-engagement').hide();
+                $('#trend-reclaim').show();
             }
         }
   });
