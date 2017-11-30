@@ -57,3 +57,7 @@ nav#menu::before {
 .modal-header.strategy h1{
   color: var(--street-base-color);
 }
+
+.strategy-modal-close {
+  color: var(--street-base-color);
+}

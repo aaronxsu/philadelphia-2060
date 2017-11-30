@@ -104,6 +104,13 @@ $(document).ready(function() {
     // var init =
     onInit();
 
+    $('.section-content-under-title-middle.slide').twentytwenty();
+    $('.twentytwenty-container').children().each(function(idx, ele) {
+        if (idx !== 2) {
+          $(this).css('height', '75vh');
+        }
+    });
+
     bindConditionEvents();
     bindStrategyEvents();
     // addLocators(init);
