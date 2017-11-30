@@ -100,10 +100,7 @@ var bindStrategyEvents = function() {
 }
 
 $(document).ready(function() {
-
-    // var init =
     onInit();
-
     $('.section-content-under-title-middle.slide').twentytwenty();
     $('.twentytwenty-container').children().each(function(idx, ele) {
         if (idx !== 2) {
@@ -113,5 +110,4 @@ $(document).ready(function() {
 
     bindConditionEvents();
     bindStrategyEvents();
-    // addLocators(init);
 });

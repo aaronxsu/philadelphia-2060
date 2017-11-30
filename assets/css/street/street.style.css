@@ -14,6 +14,22 @@ nav#menu::before {
   background-color: var(--street-base-color);
 }
 
+.section-content-under-title-middle {
+  border: 1px solid red;
+  position: absolute;
+  left: 2vw;
+  width: 96vw;
+  height: 75vh;
+  top: 15vh;
+}
+
+.section-content-under-title-middle img{
+  height: inherit;
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 .section-header-title.colored-title {
   color: var(--street-base-color);
 }
