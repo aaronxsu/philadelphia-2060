@@ -15,7 +15,6 @@ nav#menu::before {
 }
 
 .section-content-under-title-middle {
-  border: 1px solid red;
   position: absolute;
   left: 2vw;
   width: 96vw;

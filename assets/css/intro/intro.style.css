@@ -41,7 +41,7 @@ nav#menu::before {
 #trend-race img,
 #trend-poverty img,
 #trend-infras img {
-	height: inherit;
+	width: inherit;
 }
 
 #trend-vacancy img {
@@ -58,12 +58,11 @@ nav#menu::before {
 }
 
 #philly-today img {
-  height: inherit;
+  width: inherit;
 }
 
 #philly-growth img{
   width: inherit;
-  margin-top: 15vh;
 }
 
 #philly-2060 img {
@@ -90,3 +89,46 @@ nav#menu::before {
 .intro-content-right-small.colored p{
   color: var(--other-base-color);
 }
+
+.intro-video-combo {
+  position: absolute;
+  height: 92vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.intro-vid {
+  display: inline-block;
+  position: absolute;
+  right: 80%;
+  top:0;
+  width: 20%;
+  height: 100%;
+  border: 5px solid var(--other-base-color);
+}
+
+.vid-holder-2 {
+  right: 60%;
+}
+
+.vid-holder-3 {
+  right: 40%;
+}
+
+.vid-holder-4 {
+  right: 20%;
+}
+
+.vid-holder-5 {
+  right: 0%;
+}
+
+video {
+  height: inherit;
+}
+
+
+/*.vid-holder-2 video {
+  margin-left: -700px;
+}*/

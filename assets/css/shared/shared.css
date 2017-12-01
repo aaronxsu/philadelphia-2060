@@ -415,7 +415,6 @@ input:checked + .slider:before {
   margin-right: 2vw;
   padding-top: 15vh;
   padding-bottom: 10vh;
-  border: 1px solid blue;
 }
 
 .slide-content img{
@@ -454,7 +453,6 @@ input:checked + .slider:before {
 }
 
 .section-content-under-title-middle {
-  border: 1px solid red;
   position: absolute;
   left: 2vw;
   width: 96vw;
@@ -472,7 +470,6 @@ input:checked + .slider:before {
 .section-content-under-title-middle-inner {
   width: 90%;
   margin: 0 auto;
-  border: 2px solid #f00;
   height: inherit;
 }
 

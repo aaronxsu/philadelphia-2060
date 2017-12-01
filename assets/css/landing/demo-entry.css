@@ -52,11 +52,13 @@
 .content__title {
 	font-size: 10vw;
 	margin: 0;
-	font-weight: normal;
+	font-weight: 600;
 	cursor: pointer;
 	font-family: var(--content-font);
-	color: var(--body-text-alt);
+	color: white;
 	position: relative;
+	background-color: black;
+  opacity: 0.8;
 }
 
 .page-nav--open ~ .content__title {
@@ -66,13 +68,8 @@
 .content .pieces {
 	height: var(--pieces-height);
 	width: calc(var(--pieces-height) * calc(900/599));
-	/*height: 100%;*/
-	/*width: 100%;*/
 	position: absolute;
-	left: 35%;
-	top: 50%;
-	margin-left: calc(-1 * var(--pieces-height) * calc(888/1000) / 2);
-	margin-top: calc(-1 * var(--pieces-height) / 2);
+	margin: 0 auto;
 	pointer-events: none;
 }
 
