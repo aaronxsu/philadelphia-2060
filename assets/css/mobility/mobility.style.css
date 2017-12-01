@@ -38,10 +38,8 @@ nav#menu::before {
   display: none;
 }
 
-#trend-avs img {
-  height: inherit;
-  position: absolute;
-  left: 25%;
+.right-content-whole-height-holder img{
+  width: inherit;
 }
 
 .strategy-modal-left.mobility-5 img {
@@ -50,5 +48,9 @@ nav#menu::before {
 }
 
 .modal-header.strategy {
+  color: var(--mobility-base-color);
+}
+
+.strategy-modal-close {
   color: var(--mobility-base-color);
 }
