@@ -77,3 +77,7 @@ nav#menu::before {
 .strategy-modal-close {
   color: var(--street-base-color);
 }
+
+.strategy-modal-right {
+  padding-left: 2%;
+}
