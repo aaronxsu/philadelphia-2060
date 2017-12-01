@@ -50,3 +50,18 @@ nav#menu::before {
 #trend-reclaim img{
   height: inherit;
 }
+
+.ps-condi-only-text{
+  position: absolute;
+  bottom: 5vh;;
+  font-size: 2em;
+}
+
+.text-highlighter {
+  color: var(--public-space-base-color);
+}
+
+.section-content-under-title-middle.focus-area img{
+  height: inherit;
+  margin-left: 0;
+}
