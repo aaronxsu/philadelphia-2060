@@ -150,7 +150,7 @@ a {
   margin: 10px;
   padding-left: 30px;
   text-transform: uppercase;
-  color: var(--intro-base-color);
+  color: var(--other-base-color);
   font-size: var(--font-size-section-title);
   background-color: var(--font-color-white);
 }

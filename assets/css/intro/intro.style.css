@@ -1,5 +1,5 @@
 .fixed-header {
-  background-color: var(--other-base-color-one-shade-darker);
+  background-color: var(--other-base-color);
 }
 
 nav#menu::before {

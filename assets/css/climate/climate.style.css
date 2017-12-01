@@ -1,5 +1,5 @@
 .fixed-header {
-  background-color: var(--climate-base-color-one-shade-darker);
+  background-color: var(--climate-base-color);
 }
 
 nav#menu::before {

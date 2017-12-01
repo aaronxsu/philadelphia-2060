@@ -1,5 +1,5 @@
 .fixed-header {
-  background-color: var(--public-space-base-color-one-shade-darker);
+  background-color: var(--public-space-base-color);
 }
 
 nav#menu::before {
