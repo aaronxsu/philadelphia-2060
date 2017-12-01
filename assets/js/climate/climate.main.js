@@ -1,8 +1,8 @@
 const climateBaseColor = '#8EB67C';
-const climate2ftColor = '#294489';
-const climate4ftColor = '#ED793C';
-const climate6ftColor = '#B570A7';
-const climateSurgeColor = '#527c94';
+const climate2ftColor = '#527c94';
+const climate4ftColor = '#294489';
+const climate6ftColor = '#1b2e5c';
+const climateSurgeColor = '#ED793C';
 
 var threatsSelectedHeading = 'threats-heading-1';
 var plottedThreatLayerIds = ['switch-threats-2ft'];
@@ -29,7 +29,7 @@ var setHeaderStyleById = function (id, background, font) {
 
 var setThreatsMap = function(id, center, zoom) {
     var threatsMap = L.map(id).setView(center, zoom);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png', {
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {
       'maxZoom': 18,
       'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
     }).addTo(threatsMap);

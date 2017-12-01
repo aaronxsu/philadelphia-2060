@@ -9,6 +9,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     color: var(--font-color-black);
+    background-color: var(--font-color-white);
 }
 
 a {

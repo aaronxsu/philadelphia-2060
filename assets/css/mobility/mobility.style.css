@@ -54,3 +54,17 @@ nav#menu::before {
 .strategy-modal-close {
   color: var(--mobility-base-color);
 }
+
+.mobility-modal-body-full {
+  position: absolute;
+  height: 95%;
+  width: 98%;
+}
+
+.mobility-modal-body-full img {
+  height: inherit;
+  width: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: block;
+}

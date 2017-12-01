@@ -23,7 +23,7 @@ nav#menu::before {
 }
 
 #threats-photo img {
-  height: inherit;
+  width: inherit;
 }
 
 .vision-text {
@@ -41,12 +41,36 @@ nav#menu::before {
   z-index: 2000;
 }
 
-input:checked + .slider {
-  background-color: var(--climate-base-color);
+input:checked + .slider.two {
+  background-color: #527c94;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--climate-base-color);
+input:focus + .slider.two {
+  box-shadow: 0 0 1px #527c94;
+}
+
+input:checked + .slider.four {
+  background-color: #294489;
+}
+
+input:focus + .slider.four {
+  box-shadow: 0 0 1px #294489;
+}
+
+input:checked + .slider.six {
+  background-color: #1b2e5c;
+}
+
+input:focus + .slider.six {
+  box-shadow: 0 0 1px #1b2e5c;
+}
+
+input:checked + .slider.surge {
+  background-color: #ED793C;
+}
+
+input:focus + .slider.surge {
+  box-shadow: 0 0 1px #ED793C;
 }
 
 .card-header.strategy {
@@ -83,4 +107,10 @@ input:focus + .slider {
 #vulnerability-composite-map img {
   margin-top: 4vh;
   width: inherit;
+}
+
+.climate-threats-seas {
+  font-size: 2em;
+  display: inline-block;
+  margin-right: 2vw;
 }
