@@ -9,18 +9,3 @@
 .section {
   background-color: var(--conclusion-base-color);
 }
-
-.conclusion-full-extent {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 92vh;
-}
-
-.conclusion-full-extent img {
-  height: inherit;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}

@@ -18,12 +18,20 @@ nav#menu::before {
   color: var(--climate-base-color);
 }
 
-#threats-line-chart img{
+#threats-line-chart img,
+#vulnerability-composite-map img{
   width: inherit;
+  vertical-align: middle;
+  border: 1px solid red;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 #threats-photo img {
-  width: inherit;
+  height: inherit;
 }
 
 .vision-text {
@@ -33,6 +41,10 @@ nav#menu::before {
 
 .card-header.threats a {
   color: var(--climate-base-color);
+}
+
+.right-content-whole-height-holder {
+  line-height: 100%;
 }
 
 #threats-line-chart,
@@ -104,13 +116,28 @@ input:focus + .slider.surge {
   font-size: 1.2em;
 }
 
-#vulnerability-composite-map img {
-  margin-top: 4vh;
-  width: inherit;
+.collapse-content {
+  font-size: 2em;
 }
 
 .climate-threats-seas {
-  font-size: 2em;
+  font-size: 1.7em;
   display: inline-block;
   margin-right: 2vw;
+}
+
+.slide-full-extent {
+  margin-top: 0;
+  margin-bottom: 8vh;
+  height: 92vh;
+  line-height: 92vh;
+}
+
+.slide-full-extent img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.strategy-modal-right-content-all {
+  padding-left: 20px;
 }
