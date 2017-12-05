@@ -540,3 +540,31 @@ input:checked + .slider:before {
   margin-right: auto;
   display: block;
 }
+
+.ps-condi-only-text{
+  position: absolute;
+  bottom: 5vh;;
+  font-size: 2em;
+}
+
+.slide-full-extent {
+  margin-top: 0;
+  margin-bottom: 8vh;
+  height: 92vh;
+  line-height: 92vh;
+}
+
+.slide-full-extent.side-by-side {
+  width: inherit;
+  border: 1px solid red;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.slide-full-extent img {
+  width: 100%;
+  vertical-align: middle;
+}

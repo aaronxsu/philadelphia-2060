@@ -51,12 +51,6 @@ nav#menu::before {
   height: inherit;
 }
 
-.ps-condi-only-text{
-  position: absolute;
-  bottom: 5vh;;
-  font-size: 2em;
-}
-
 .text-highlighter {
   color: var(--public-space-base-color);
 }

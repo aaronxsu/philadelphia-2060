@@ -126,18 +126,6 @@ input:focus + .slider.surge {
   margin-right: 2vw;
 }
 
-.slide-full-extent {
-  margin-top: 0;
-  margin-bottom: 8vh;
-  height: 92vh;
-  line-height: 92vh;
-}
-
-.slide-full-extent img {
-  width: 100%;
-  vertical-align: middle;
-}
-
 .strategy-modal-right-content-all {
   padding-left: 20px;
 }

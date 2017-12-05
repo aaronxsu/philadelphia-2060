@@ -99,13 +99,20 @@ var bindStrategyEvents = function() {
     })
 }
 
+var changeSliderTopMargin = function() {
+    var h1 = $('.twentytwenty-wrapper.twentytwenty-horizontal').height();
+    var h2 = $('.twentytwenty-wrapper.twentytwenty-horizontal').parent().height();
+    $('.twentytwenty-wrapper.twentytwenty-horizontal').css('margin-top', (h2-h1)/2);
+}
+
 $(document).ready(function() {
     onInit();
-    $('.section-content-under-title-middle.slide').twentytwenty();
-    $('.twentytwenty-container').children().each(function(idx, ele) {
-        if (idx !== 2) {
-          $(this).css('height', '75vh');
-        }
+    $('.side-by-side').twentytwenty();
+
+    changeSliderTopMargin();
+
+    $(window).resize(function() {
+        changeSliderTopMargin();
     });
 
     bindConditionEvents();
