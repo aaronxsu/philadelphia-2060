@@ -58,14 +58,15 @@ nav#menu::before {
   position: absolute;
   height: 95%;
   width: 98%;
+  border: 1px solid blue;
 }
 
-.mobility-modal-body-full img {
-  height: inherit;
-  width: auto;
-  margin-left: 25%;
-  margin-right: 25%;
+.mobility-modal-body-full img{
+  margin:auto;
   display: block;
+  height: 100%;
+  width: auto;
+  border: 1px solid red;
 }
 
 .vision-text {

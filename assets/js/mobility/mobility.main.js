@@ -3,6 +3,11 @@ const mobilityBaseColor = '#294489';
 var conditionSelectedHeading = 'condition-heading-1';
 var trendSelectedHeading = 'trend-heading-2';
 
+var layers =  {
+    lyrBsl: [],
+    newBusLines: {}
+};
+
 var initFullPage = function() {
     $('#climate-fullpage').fullpage({
         'lazyLoading': true,
@@ -26,6 +31,15 @@ var onInit = function() {
     initMaterialBootstrap();
     setHeaderStyleById(conditionSelectedHeading, mobilityBaseColor, 'white');
     setHeaderStyleById(trendSelectedHeading, mobilityBaseColor, 'white');
+}
+
+var setMap = function(id, center, zoom) {
+    var map = L.map(id).setView(center, zoom);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {
+      'maxZoom': 18,
+      'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
+    }).addTo(map);
+    return map;
 }
 
 
@@ -126,14 +140,48 @@ var bindStrategyEvents = function() {
     })
 }
 
+var setTransitMap = function(map) {
+    map.invalidateSize();
+
+    layers.lyrBsl = _.map(bsl.features, function(f){
+        return L.circleMarker([f.geometry.coordinates[1],f.geometry.coordinates[0]], {
+            fillColor: '#ffa500',
+            fillOpacity: 0.9,
+            stroke: false,
+            radius: 5
+        });
+    });
+
+    layers.newBusLines = L.geoJSON(newBusLines, {'style': function(f) {
+        var color = f.properties.Capacity == 1 ? '#121f3e' :
+                    f.properties.Capacity == 2 ? '#3c62c5' : '#b5c3e9';
+        return {
+          color: color,
+          weight: 4
+        }
+    }});
+
+    console.log(newBusLines);
+
+}
+
 
 $(document).ready(function() {
 
     // var init =
     onInit();
+    $('#strategy-modal-2').modal({show: true});
 
     bindConditionEvents();
     // bingTrendEvents();
+
+    var transitMap = setMap('strategy-transit-map', [39.986273, -75.156225], 12);
+
+
+    $('#strategy-modal-2').on('shown.bs.modal', function () {
+        setTransitMap(transitMap);
+    })
+
     bindStrategyEvents();
     // addLocators(init);
 });

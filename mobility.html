@@ -20,6 +20,7 @@
 		<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="assets/js/shared/leaflet.js"></script>
 		<script type="text/javascript" src="assets/js/shared/underscore.min.js"></script>
+		<script type="text/javascript" src="assets/data/mobility/data.js"></script>
 		<script type="text/javascript" src="assets/js/mobility/mobility.main.js"></script>
 	</head>
 	<body>
@@ -317,7 +318,7 @@
 				<div class="section-header">
 					<p class="section-header-title">Getting Started</p>
 				</div>
-				<div class="section-content-under-title-middle placeholder-box">
+				<div class="section-content-under-title-middle">
 					<img src="assets/image/mobility/NextSteps_Mobility-01-01.png"></img>
 				</div>
 			</div>
@@ -327,16 +328,11 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-1-close">X</div>
 					<div class="modal-header strategy">
-						<h1>Strategy 1: Automate Transit</h1>
+						<h1>9: Automate Transit</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left">
-							<img class="card-img-top" src="assets/image/mobility/mobility_strategies-01.png">
-						</div>
-						<div class="strategy-modal-right">
-							<div class="strategy-modal-right-content-all">
-								<p>AVs will significantly reduce the cost of providing transit</p>
-							</div>
+						<div class="mobility-modal-body-full">
+							<img src="assets/image/mobility/mobility_strategies-01.png"></img>
 						</div>
 					</div>
 				</div>
@@ -347,12 +343,10 @@
 				<div class="modal-content modal-content-strategies">
 					<div class="strategy-modal-close" id="strategy-modal-2-close">X</div>
 					<div class="modal-header strategy">
-						<h1>Strategy 2: Improve Neighborhood Surface Transit</h1>
+						<h1>10: Improve Neighborhood Surface Transit</h1>
 					</div>
 					<div class="modal-body">
-						<div class="strategy-modal-left placeholder-box">
-							<div>Interactive surface transit map</div>
-						</div>
+						<div class="strategy-modal-left" id="strategy-transit-map"></div>
 						<div class="strategy-modal-right">
 							<div class="strategy-modal-right-content-all">
 								<p><b>Useful Surface Transit Characteristics:</b></p>
