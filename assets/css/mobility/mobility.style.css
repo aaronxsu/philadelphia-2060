@@ -33,8 +33,7 @@ nav#menu::before {
 }
 
 #condition-transit,
-#condition-funding,
-#trend-avs {
+#condition-funding, {
   display: none;
 }
 
@@ -67,4 +66,8 @@ nav#menu::before {
   margin-left: 25%;
   margin-right: 25%;
   display: block;
+}
+
+.vision-text {
+  margin-bottom: 0;
 }

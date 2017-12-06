@@ -1,7 +1,7 @@
 const mobilityBaseColor = '#294489';
 
 var conditionSelectedHeading = 'condition-heading-1';
-var trendSelectedHeading = 'trend-heading-1';
+var trendSelectedHeading = 'trend-heading-2';
 
 var initFullPage = function() {
     $('#climate-fullpage').fullpage({
@@ -133,7 +133,7 @@ $(document).ready(function() {
     onInit();
 
     bindConditionEvents();
-    bingTrendEvents();
+    // bingTrendEvents();
     bindStrategyEvents();
     // addLocators(init);
 });
