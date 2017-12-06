@@ -5,7 +5,9 @@ var trendSelectedHeading = 'trend-heading-2';
 
 var layers =  {
     lyrBsl: [],
-    newBusLines: {}
+    newBusLines: {},
+    lyrMfl: [],
+    lyrRail: {}
 };
 
 var initFullPage = function() {
@@ -143,25 +145,60 @@ var bindStrategyEvents = function() {
 var setTransitMap = function(map) {
     map.invalidateSize();
 
+    layers.newBusLines = L.geoJSON(newBusLines, {
+        style: function(f) {
+            var color = f.properties.Capacity == 1 ? '#121f3e' :
+                        f.properties.Capacity == 2 ? '#3c62c5' : '#b5c3e9';
+            return {
+              color: color,
+              weight: 4
+            };
+        },
+        onEachFeature: function(f, l) {
+            l.bindPopup(f.properties.Name ? f.properties.Name : 'NA');
+        }
+    }).addTo(map);
+
+    layers.lyrRail = L.geoJSON(septaRail, {
+        style: function(f) {
+            var names = ["Market-Frankford Lin", "PATCO", "Broad Street Line", "Airport", "RR Market East", "RR 30th Street", "Trolley"];
+            var color = f.properties['OPERATOR'] == 'Market-Frankford Lin' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'PATCO' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'Broad Street Line' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'Airport' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'RR Market East' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'RR 30th Street' ? '#121f3e' :
+                        f.properties['OPERATOR'] == 'Trolley' ? '#121f3e' : '#121f3e'
+            return {
+              color: color,
+              weight: 4
+            };
+        },
+        onEachFeature: function(f, l) {
+            l.bindPopup(f.properties['OPERATOR'] ? f.properties['OPERATOR'] : 'NA');
+        }
+    }).addTo(map);
+
+    layers.lyrMfl = _.map(mfl.features, function(f){
+        return L.circleMarker([f.geometry.coordinates[1],f.geometry.coordinates[0]], {
+            fillColor: '#00008b',
+            fillOpacity: 0.9,
+            color: '#ffffff',
+            radius: 5,
+            weight: 1
+        }).bindPopup(f.properties['STATION'] ? f.properties['STATION'] : 'NA').addTo(map);
+    });
+
+
     layers.lyrBsl = _.map(bsl.features, function(f){
         return L.circleMarker([f.geometry.coordinates[1],f.geometry.coordinates[0]], {
             fillColor: '#ffa500',
             fillOpacity: 0.9,
-            stroke: false,
-            radius: 5
-        });
+            color: '#ffffff',
+            radius: 5,
+            weight: 1
+        }).bindPopup(f.properties['Station']? f.properties['Station'] : 'NA').addTo(map);
     });
-
-    layers.newBusLines = L.geoJSON(newBusLines, {'style': function(f) {
-        var color = f.properties.Capacity == 1 ? '#121f3e' :
-                    f.properties.Capacity == 2 ? '#3c62c5' : '#b5c3e9';
-        return {
-          color: color,
-          weight: 4
-        }
-    }});
-
-    console.log(newBusLines);
 
 }
 
@@ -170,7 +207,6 @@ $(document).ready(function() {
 
     // var init =
     onInit();
-    $('#strategy-modal-2').modal({show: true});
 
     bindConditionEvents();
     // bingTrendEvents();
