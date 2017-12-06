@@ -44,11 +44,17 @@ nav#menu::before {
   display: none;
 }
 
+.right-content-whole-height-holder {
+  line-height: 100%;
+}
+
 #trend-equity img,
 #trend-mutliuse img,
 #trend-engagement img,
 #trend-reclaim img{
   height: inherit;
+  vertical-align: middle;
+  border: 1px solid red;
 }
 
 .text-highlighter {
@@ -58,4 +64,23 @@ nav#menu::before {
 .section-content-under-title-middle.focus-area img{
   height: inherit;
   margin-left: 0;
+}
+
+#condition-public-space img{
+  width: inherit;
+  vertical-align: middle;
+  border: 1px solid red;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.vision-text{
+  margin-bottom: 0;
+}
+
+.strategy-modal-right {
+  padding-left: 20px;
 }
