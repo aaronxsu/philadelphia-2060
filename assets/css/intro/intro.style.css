@@ -40,13 +40,11 @@ nav#menu::before {
 
 #trend-race img,
 #trend-poverty img,
-#trend-infras img {
-	width: inherit;
-}
-
+#trend-infras img,
 #trend-vacancy img {
-	margin-top: 15vh;
-	width: inherit;
+  width: inherit;
+  vertical-align: middle;
+  border: 1px solid red;
 }
 
 .intro-content-left-big {
@@ -83,7 +81,6 @@ nav#menu::before {
   font-size: 2em;
   line-height: 2em;
   color: white;
-  bottom: 0;
 }
 
 .intro-content-right-small.colored p{
