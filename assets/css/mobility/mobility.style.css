@@ -33,7 +33,7 @@ nav#menu::before {
 }
 
 #condition-transit,
-#condition-funding, {
+#condition-funding {
   display: none;
 }
 
