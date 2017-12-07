@@ -107,7 +107,11 @@ var changeSliderTopMargin = function() {
 
 $(document).ready(function() {
     onInit();
-    $('.side-by-side').twentytwenty();
+    $('.side-by-side').twentytwenty({
+        no_overlay: true,
+        click_to_move: true,
+        default_offset_pct: 0.95
+    });
 
     changeSliderTopMargin();
 
