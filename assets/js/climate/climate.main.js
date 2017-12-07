@@ -72,7 +72,11 @@ var onInit = function() {
         'lyr2ft': L.geoJSON(climate2ft, {style: setStormLayerStyle(climate2ftColor)}),
         'lyr4ft': L.geoJSON(climate4ft, {style: setStormLayerStyle(climate4ftColor)}),
         'lyr6ft': L.geoJSON(climate6ft, {style: setStormLayerStyle(climate6ftColor)}),
-        'lyrSurge': L.geoJSON(climateSurge, {style: setStormLayerStyle(climateSurgeColor)}),
+        'lyrSurge': L.geoJSON(climateSurge, {style: {
+            fillColor: '#ED793C',
+            fillOpacity: 0.6,
+            stroke: false
+        }}),
         'lyrLocators': locators.map(function(locator){return L.circle(locator, setLocatorMarkerStyle(climateBaseColor));})
     };
 }
