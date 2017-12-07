@@ -54,11 +54,11 @@ nav#menu::before {
 }
 
 input:checked + .slider.two {
-  background-color: #527c94;
+  background-color: #294489;
 }
 
 input:focus + .slider.two {
-  box-shadow: 0 0 1px #527c94;
+  box-shadow: 0 0 1px #294489;
 }
 
 input:checked + .slider.four {
@@ -70,11 +70,11 @@ input:focus + .slider.four {
 }
 
 input:checked + .slider.six {
-  background-color: #1b2e5c;
+  background-color: #294489;
 }
 
 input:focus + .slider.six {
-  box-shadow: 0 0 1px #1b2e5c;
+  box-shadow: 0 0 1px #294489;
 }
 
 input:checked + .slider.surge {

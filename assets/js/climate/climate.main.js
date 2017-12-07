@@ -1,7 +1,7 @@
 const climateBaseColor = '#8EB67C';
-const climate2ftColor = '#527c94';
+const climate2ftColor = '#294489';
 const climate4ftColor = '#294489';
-const climate6ftColor = '#1b2e5c';
+const climate6ftColor = '#294489';
 const climateSurgeColor = '#ED793C';
 
 var threatsSelectedHeading = 'threats-heading-1';
@@ -48,7 +48,7 @@ var setLocatorMap = function(id, center, zoom) {
 var setStormLayerStyle = function(fillColor) {
     return {
         fillColor: fillColor,
-        fillOpacity: 0.5,
+        fillOpacity: 1,
         stroke: false
     }
 }
@@ -68,7 +68,7 @@ var onInit = function() {
     setHeaderStyleById(threatsSelectedHeading, climateBaseColor, 'white');
 
     return {
-        'map': setThreatsMap(mapId, [39.9526, -75.1652], 11),
+        'map': setThreatsMap(mapId, [39.9526, -75.1652], 12),
         'lyr2ft': L.geoJSON(climate2ft, {style: setStormLayerStyle(climate2ftColor)}),
         'lyr4ft': L.geoJSON(climate4ft, {style: setStormLayerStyle(climate4ftColor)}),
         'lyr6ft': L.geoJSON(climate6ft, {style: setStormLayerStyle(climate6ftColor)}),
