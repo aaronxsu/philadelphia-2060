@@ -47,12 +47,19 @@ nav#menu::before {
   border: 1px solid red;
 }
 
-.intro-content-left-big {
-  position: absolute;
-  top: 15vh;
-  left: 2vw;
-  width: 65vw;
+.intro-content-under-title {
+  margin-top: 10vh;
+  margin-bottom: 8vh;
+  border: 1px solid red;
   height: 75vh;
+}
+
+.intro-content-under-title img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: inherit;
+  width: auto;
 }
 
 #philly-today img {

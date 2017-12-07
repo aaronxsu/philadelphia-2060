@@ -142,6 +142,11 @@ var bindStrategyEvents = function() {
     })
 }
 
+var getColor = function(level) {
+    return level === 'Tier 1' ? '#121f3e' :
+                level === 'Tier 2' ? '#3c62c5' : '#b5c3e9';
+}
+
 var setTransitMap = function(map) {
     map.invalidateSize();
 
@@ -151,13 +156,28 @@ var setTransitMap = function(map) {
                         f.properties.Capacity == 2 ? '#3c62c5' : '#b5c3e9';
             return {
               color: color,
-              weight: 4
+              weight: 6
             };
         },
         onEachFeature: function(f, l) {
             l.bindPopup(f.properties.Name ? f.properties.Name : 'NA');
         }
     }).addTo(map);
+
+    var legend = L.control({position: 'bottomleft'});
+
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = ['Tier 1', 'Tier 2', 'Tier 3'],
+            labels = [];
+
+        for (var i = 0; i < grades.length; i++) {
+            div.innerHTML += '<i style="background:' + getColor(grades[i]) + '"></i> ' + grades[i] + (grades[i + 1] ? '<br>' : '');
+        }
+        return div;
+    };
+
+    legend.addTo(map);
 
     // layers.lyrRail = L.geoJSON(septaRail, {
     //     style: function(f) {
