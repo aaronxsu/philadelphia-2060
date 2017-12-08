@@ -164,21 +164,6 @@ var setTransitMap = function(map) {
         }
     }).addTo(map);
 
-    var legend = L.control({position: 'bottomleft'});
-
-    legend.onAdd = function (map) {
-        var div = L.DomUtil.create('div', 'info legend'),
-            grades = ['Tier 1', 'Tier 2', 'Tier 3'],
-            labels = [];
-
-        for (var i = 0; i < grades.length; i++) {
-            div.innerHTML += '<i style="background:' + getColor(grades[i]) + '"></i> ' + grades[i] + (grades[i + 1] ? '<br>' : '');
-        }
-        return div;
-    };
-
-    legend.addTo(map);
-
     // layers.lyrRail = L.geoJSON(septaRail, {
     //     style: function(f) {
     //         var names = ["Market-Frankford Lin", "PATCO", "Broad Street Line", "Airport", "RR Market East", "RR 30th Street", "Trolley"];
@@ -232,6 +217,21 @@ $(document).ready(function() {
     // bingTrendEvents();
 
     var transitMap = setMap('strategy-transit-map', [39.986273, -75.156225], 12);
+
+    var legend = L.control({position: 'bottomleft'});
+
+    legend.onAdd = function (transitMap) {
+        var div = L.DomUtil.create('div', 'info legend'),
+            grades = ['Tier 1', 'Tier 2', 'Tier 3'],
+            labels = [];
+
+        for (var i = 0; i < grades.length; i++) {
+            div.innerHTML += '<i style="background:' + getColor(grades[i]) + '"></i> ' + grades[i] + (grades[i + 1] ? '<br>' : '');
+        }
+        return div;
+    };
+
+    legend.addTo(transitMap);
 
 
     $('#strategy-modal-2').on('shown.bs.modal', function () {
