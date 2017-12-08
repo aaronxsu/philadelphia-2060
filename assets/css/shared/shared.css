@@ -412,6 +412,7 @@ input:checked + .slider:before {
 
 .strategy-modal-right-content-all {
   font-size: 2em;
+  color: var(--other-base-color-three-shades-darker);
 }
 
 .slide-content {
@@ -542,6 +543,7 @@ input:checked + .slider:before {
   position: absolute;
   bottom: 5vh;;
   font-size: 2em;
+  color: var(--other-base-color-three-shades-darker);
 }
 
 .slide-full-extent {

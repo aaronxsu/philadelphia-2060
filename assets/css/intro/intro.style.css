@@ -61,7 +61,7 @@ nav#menu::before {
 }
 
 #philly-today img {
-  width: inherit;
+  /*width: inherit;*/
 }
 
 #philly-growth img{
