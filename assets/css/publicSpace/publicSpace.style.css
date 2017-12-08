@@ -54,7 +54,6 @@ nav#menu::before {
 #trend-reclaim img{
   height: inherit;
   vertical-align: middle;
-  border: 1px solid red;
 }
 
 .text-highlighter {
@@ -69,7 +68,6 @@ nav#menu::before {
 #condition-public-space img{
   width: inherit;
   vertical-align: middle;
-  border: 1px solid red;
   position: relative;
   top: 50%;
   transform: translateY(-50%);

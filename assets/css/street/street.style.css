@@ -51,7 +51,6 @@ nav#menu::before {
 #condition-coverage img{
   width: inherit;
   vertical-align: middle;
-  border: 1px solid red;
 }
 
 #condition-coverage {

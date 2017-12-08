@@ -44,13 +44,11 @@ nav#menu::before {
 #trend-vacancy img {
   width: inherit;
   vertical-align: middle;
-  border: 1px solid red;
 }
 
 .intro-content-under-title {
   margin-top: 10vh;
   margin-bottom: 8vh;
-  border: 1px solid red;
   height: 75vh;
 }
 
