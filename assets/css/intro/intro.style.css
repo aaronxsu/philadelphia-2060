@@ -60,10 +60,6 @@ nav#menu::before {
   width: auto;
 }
 
-#philly-today img {
-  /*width: inherit;*/
-}
-
 #philly-growth img{
   width: inherit;
 }
@@ -129,8 +125,3 @@ nav#menu::before {
 video {
   height: inherit;
 }
-
-
-/*.vid-holder-2 video {
-  margin-left: -700px;
-}*/

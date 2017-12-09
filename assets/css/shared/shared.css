@@ -308,8 +308,15 @@ input:checked + .slider:before {
   height: 25%;
 }
 
-.card-body.typology h4{
+.card-body.typology p{
   font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 
 .strategy-content {
