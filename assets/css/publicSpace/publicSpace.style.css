@@ -82,8 +82,3 @@ nav#menu::before {
 .strategy-modal-right {
   padding-left: 20px;
 }
-
-.strategy-modal-left img {
-  height: inherit;
-  width: auto;
-}

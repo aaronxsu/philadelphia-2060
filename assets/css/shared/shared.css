@@ -395,8 +395,8 @@ input:checked + .slider:before {
 }
 
 .strategy-modal-left img {
-  height: inherit;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 
 .strategy-modal-right{

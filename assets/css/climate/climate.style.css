@@ -128,8 +128,3 @@ input:focus + .slider.surge {
 .strategy-modal-right-content-all {
   padding-left: 20px;
 }
-
-.strategy-modal-left img {
-  width: 100%;
-  height: auto;
-}
